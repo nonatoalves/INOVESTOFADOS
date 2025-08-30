@@ -15,12 +15,32 @@
     .btn-danger { background-color: #d9534f; }
     .btn-danger:hover { background-color: #c9302c; }
     footer { background-color: #1f2937; color: #f9fafb; text-align: center; padding: 2rem 0; }
-    .whatsapp-btn { position: fixed; bottom: 20px; right: 20px; background-color: #25d366; color: white; border-radius: 50%; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; font-size: 2rem; text-decoration: none; }
-    .whatsapp-btn:hover { background-color: #128c7e; }
+    
+    /* Botão flutuante estilo WhatsApp oficial */
+    .whatsapp-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 60px;
+      height: 60px;
+      border-radius: 15px;
+      background-color: #25d366;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      cursor: pointer;
+    }
+    .whatsapp-btn svg {
+      width: 35px;
+      height: 35px;
+    }
+
     .gallery-item img, .card img, .video-section video { width: 100%; height: auto; border-radius: 5px; }
-    .features { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; text-align: center; }
-    .features div { flex: 1 1 200px; }
-    .offer-timer { font-size: 1.5rem; color: #d9534f; font-weight: bold; margin-top: 1rem; }
+    .features { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; text-align: left; }
+    .feature-item { display: flex; align-items: center; gap: 0.5rem; background: #fff; padding: 1rem; border-radius: 5px; flex: 1 1 200px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+    .feature-item span { font-size: 1.5rem; }
+    .offer-timer { font-size: 1.5rem; color: #d9534f; font-weight: bold; margin-top: 1rem; text-align: center; }
     .card { border: 1px solid #ccc; border-radius: 5px; padding: 1rem; margin: 1rem auto; max-width: 400px; text-align: center; background: #fff; }
     .card-title { font-weight: bold; font-size: 1.2rem; }
     .card-text { font-size: 0.95rem; margin-bottom: 1rem; }
@@ -36,11 +56,11 @@
 </header>
 
 <section class="container py-5 features">
-  <h2>Nossas Vantagens</h2>
-  <div><strong>+ de 500 clientes satisfeitos</strong></div>
-  <div><strong>Preços de fábrica</strong></div>
-  <div><strong>Entrega rápida</strong></div>
-  <div><strong>Qualidade garantida</strong></div>
+  <h2 style="width:100%; text-align:center; margin-bottom:1rem;">Nossas Vantagens</h2>
+  <div class="feature-item"><span>👥</span> <strong>+ de 500 clientes satisfeitos</strong></div>
+  <div class="feature-item"><span>🏷️</span> <strong>Preços de fábrica</strong></div>
+  <div class="feature-item"><span>🚚</span> <strong>Entrega rápida</strong></div>
+  <div class="feature-item"><span>⭐</span> <strong>Qualidade garantida</strong></div>
 </section>
 
 <section class="container py-5 text-center">
@@ -63,19 +83,24 @@
 
 <section class="container py-5 text-center">
   <h2>Fale Conosco</h2>
-  <p>WhatsApp: +55 81 99928-1012</p>
-  <p>Email: contato@inovestofados.com.br</p>
+  <p>WhatsApp: <span style="color:#25d366;">📞</span> +55 81 99928-1012</p>
+  <p>Email: ✉️ contato@inovestofados.com.br</p>
 </section>
 
 <footer>
   <p>&copy; 2025 INOVESTOFADOS - Todos os direitos reservados</p>
 </footer>
 
-<a class="whatsapp-btn" title="Fale conosco via WhatsApp">&#128241;</a>
+<!-- Botão flutuante com ícone WhatsApp -->
+<a class="whatsapp-btn" title="Fale conosco via WhatsApp" href="https://wa.me/5581999281012" target="_blank">
+  <svg xmlns="http://www.w3.org/2000/svg" fill="#FFFFFF" viewBox="0 0 24 24">
+    <path d="M20.52 3.48A11.82 11.82 0 0 0 12 .1C5.65.1.48 5.27.48 11.64c0 2.05.54 4.05 1.57 5.8L0 24l6.72-1.76a11.82 11.82 0 0 0 5.28 1.28h.01c6.36 0 11.52-5.17 11.52-11.54 0-3.08-1.2-5.97-3.48-8.22zM12 21.36c-1.64 0-3.24-.44-4.64-1.28l-.33-.2-3.99 1.04 1.07-3.89-.21-.34a9.37 9.37 0 0 1-1.47-5.05c0-5.2 4.24-9.44 9.44-9.44 2.52 0 4.89.98 6.67 2.75a9.4 9.4 0 0 1 2.77 6.69c0 5.2-4.24 9.44-9.44 9.44zm5.16-7.04c-.28-.14-1.65-.82-1.91-.91-.26-.1-.45-.14-.64.14-.19.28-.73.91-.89 1.1-.16.18-.33.2-.61.07-.28-.14-1.19-.44-2.27-1.4-.84-.75-1.41-1.68-1.58-1.96-.16-.28-.02-.43.12-.57.12-.12.28-.33.42-.49.14-.16.19-.28.28-.47.09-.19.05-.35-.02-.49-.07-.14-.64-1.54-.88-2.1-.23-.56-.47-.48-.64-.49h-.55c-.19 0-.49.07-.74.35-.25.28-.97.95-.97 2.31s.99 2.68 1.13 2.87c.14.19 1.95 2.97 4.72 4.16.66.28 1.18.45 1.58.58.66.21 1.26.18 1.74.11.53-.08 1.65-.67 1.89-1.32.23-.65.23-1.21.16-1.32-.07-.11-.26-.18-.54-.32z"/>
+  </svg>
+</a>
 
 <script>
   function adicionarCarrinho() { alert("Produto adicionado ao carrinho! Entre em contato pelo WhatsApp."); }
-  function fecharPedido() { alert("Redirecione o usuário para WhatsApp."); }
+  function fecharPedido() { window.open("https://wa.me/5581999281012", "_blank"); }
 
   let countdown = 1800;
   function updateTimer() {
